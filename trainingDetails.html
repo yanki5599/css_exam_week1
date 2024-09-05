@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="trainingDetails.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Back to Schedule</a></li>
+        </ul>
+      </nav>
+      <div id="main-title">
+        <h1>Survival Skills - Wilderness</h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="rounded-block">
+        <h2 class="fore-green">Welcome to the Army Training Portal</h2>
+        <p><span class="bold">Date: </span>2024-09-25</p>
+        <p><span class="bold">Instructer: </span>Sgt. Davis</p>
+        <p>
+          <span class="bold">Description: </span>Lorem ipsum dolor sit amet
+          consectetur, adipisicing elit. Voluptates, minus quibusdam porro
+          corporis cumque iure eligendi voluptatem ab numquam id.
+        </p>
+        <p><span class="bold">Duration: </span>4 Hours</p>
+        <p><span class="bold">Equipment: </span>survival kit , map, compass</p>
+      </div>
+      <h2 class="fore-green" id="form-survival-title">
+        Sign up for Survival Skills
+      </h2>
+      <div class="rounded-block gray-backgroud">
+        <form id="survival-form" action="">
+          <label for="fname"> First Name: </label>
+          <input id="fname" type="text" name="fname" required />
+
+          <label for="fname"> Last Name: </label>
+          <input id="lname" type="text" name="lname" required />
+
+          <label for="IDnumber"> ID Number: </label>
+          <input id="IDnumber" type="number" name="IDnumber" required />
+
+          <label for="Rank">Rank:</label>
+          <select name="Rank" id="Rank" required>
+            <option value="Private">Private</option>
+            <option value="General">General</option>
+          </select>
+
+          <label>Gender:</label>
+          <div class="mt-10">
+            <input type="radio" name="gender" id="Male" required />
+            <label for="Male">Male:</label>
+          </div>
+          <div class="mt-10">
+            <input type="radio" name="gender" id="Female" required />
+            <label for="Female">Female:</label>
+          </div>
+
+          <button id="sub-form-btn" type="submit">Sign Up</button>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div>
+        <p>&copy; 2024 Army training partal. all rights reserved</p>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("survival-form")
+        .addEventListener("submit", (event) => {
+          event.preventDefault();
+          alert(
+            `First name: ${event.target.elements[0].value}\n
+            Last Name:${event.target.elements[1].value}\n
+            ID number:${event.target.elements[2].value}\n
+            Rank:${event.target.elements[3].value}\n
+            Gender:${event.target.elements[4].value}\n`
+          );
+        });
+    </script>
+  </body>
+</html>
